@@ -1,6 +1,10 @@
 # coding=utf-8
+try:
+    import cStringIO
 
-import cStringIO
+except ImportError:
+    from io import StringIO as cStringIO
+    
 import json
 import requests
 
